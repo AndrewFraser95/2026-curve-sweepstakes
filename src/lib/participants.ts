@@ -1,0 +1,88 @@
+// The 24 sweepstake players and their two drawn nations.
+// Edit this list to change who's playing.
+export interface Participant {
+  name: string;
+  teams: [string, string];
+}
+
+export const PARTICIPANTS: Participant[] = [
+  { name: "Adam Mehta", teams: ["Portugal", "Czechia"] },
+  { name: "Aftab Mohamed", teams: ["Ecuador", "Côte d'Ivoire"] },
+  { name: "Andrew Fraser", teams: ["Mexico", "Ghana"] },
+  { name: "Calum Scrimgeour", teams: ["Colombia", "Scotland"] },
+  { name: "Chris Davison", teams: ["Germany", "Canada"] },
+  { name: "Edward Lake", teams: ["United States", "Congo DR"] },
+  { name: "Emma Pitt", teams: ["Korea Republic", "Algeria"] },
+  { name: "Haajra Rafique", teams: ["Netherlands", "Tunisia"] },
+  { name: "ibrahim hussain", teams: ["Japan", "Uzbekistan"] },
+  { name: "James Tindal", teams: ["Morocco", "South Africa"] },
+  { name: "Jonny Wells", teams: ["Australia", "Jordan"] },
+  { name: "Kriti Rathore", teams: ["England", "Egypt"] },
+  { name: "Louie Dove", teams: ["Switzerland", "Haiti"] },
+  { name: "Manvir Salh", teams: ["Croatia", "Sweden"] },
+  { name: "matthew cook", teams: ["Argentina", "Norway"] },
+  { name: "Michael Morris", teams: ["Iran", "Cabo Verde"] },
+  { name: "Mitul Suchak", teams: ["Spain", "New Zealand"] },
+  { name: "Nigel Vere", teams: ["Türkiye", "Iraq"] },
+  { name: "Pamela Anozie", teams: ["Belgium", "Saudi Arabia"] },
+  { name: "Pritish Ranjan", teams: ["Austria", "Bosnia and Herzegovina"] },
+  { name: "Rebecca Nunns", teams: ["France", "Curaçao"] },
+  { name: "Rob Newman", teams: ["Uruguay", "Paraguay"] },
+  { name: "Vikas Rahar", teams: ["Brazil", "Qatar"] },
+  { name: "Will Murray", teams: ["Senegal", "Panama"] },
+];
+
+// Every unique nation in play.
+export const ALL_TEAMS: string[] = Array.from(new Set(PARTICIPANTS.flatMap((p) => p.teams))).sort();
+
+// Flag emoji for a bit of colour on the leaderboard.
+export const FLAGS: Record<string, string> = {
+  Portugal: "🇵🇹",
+  Czechia: "🇨🇿",
+  Ecuador: "🇪🇨",
+  "Côte d'Ivoire": "🇨🇮",
+  Mexico: "🇲🇽",
+  Ghana: "🇬🇭",
+  Colombia: "🇨🇴",
+  Scotland: "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+  Germany: "🇩🇪",
+  Canada: "🇨🇦",
+  "United States": "🇺🇸",
+  "Congo DR": "🇨🇩",
+  "Korea Republic": "🇰🇷",
+  Algeria: "🇩🇿",
+  Netherlands: "🇳🇱",
+  Tunisia: "🇹🇳",
+  Japan: "🇯🇵",
+  Uzbekistan: "🇺🇿",
+  Morocco: "🇲🇦",
+  "South Africa": "🇿🇦",
+  Australia: "🇦🇺",
+  Jordan: "🇯🇴",
+  England: "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+  Egypt: "🇪🇬",
+  Switzerland: "🇨🇭",
+  Haiti: "🇭🇹",
+  Croatia: "🇭🇷",
+  Sweden: "🇸🇪",
+  Argentina: "🇦🇷",
+  Norway: "🇳🇴",
+  Iran: "🇮🇷",
+  "Cabo Verde": "🇨🇻",
+  Spain: "🇪🇸",
+  "New Zealand": "🇳🇿",
+  Türkiye: "🇹🇷",
+  Iraq: "🇮🇶",
+  Belgium: "🇧🇪",
+  "Saudi Arabia": "🇸🇦",
+  Austria: "🇦🇹",
+  "Bosnia and Herzegovina": "🇧🇦",
+  France: "🇫🇷",
+  Curaçao: "🇨🇼",
+  Uruguay: "🇺🇾",
+  Paraguay: "🇵🇾",
+  Brazil: "🇧🇷",
+  Qatar: "🇶🇦",
+  Senegal: "🇸🇳",
+  Panama: "🇵🇦",
+};
